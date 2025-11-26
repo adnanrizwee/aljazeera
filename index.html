@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Jazira Takaful - Islamic Insurance in Saudi Arabia</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="assets/icons/logo-preloader.svg" alt="Loading..." class="preloader-logo">
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="top-bar-content d-flex justify-content-center align-items-center">
+                        <!-- Theme Toggle -->
+                        <div class="theme-toggle me-4">
+                            <i class="fas fa-sun"></i>
+                            <label class="switch">
+                                <input type="checkbox" id="themeToggle">
+                                <span class="slider round"></span>
+                            </label>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="contact-item me-4">
+                            <a href="tel:8003040400">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>8003040400</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-item me-4">
+                            <a href="mailto:info@ajt.com.sa">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@ajt.com.sa</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Arabic Toggle -->
+                        <div class="lang-toggle me-4">
+                            <a href="#">العربية</a>
+                        </div>
+                        
+                        <!-- Login -->
+                        <div class="login-btn">
+                            <a href="#">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>login</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/icons/logo.svg" alt="Al Jazira Takaful" class="logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            INDIVIDUAL PRODUCTS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">MOTOR</a></li>
+                            <li><a class="dropdown-item" href="#">MEDICAL</a></li>
+                            <li><a class="dropdown-item" href="#">TRAVEL</a></li>
+                            <li><a class="dropdown-item" href="#">VISIT VISA EXTENSION</a></li>
+                            <li><a class="dropdown-item" href="#">HOUSEHOLDER</a></li>
+                            <li><a class="dropdown-item" href="#">MEDICAL MALPRACTICE</a></li>
+                            <li><a class="dropdown-item" href="#">PROTECTION & SAVINGS</a></li>
+                            <li><a class="dropdown-item" href="#">CRAFTSMEN</a></li>
+                            <li><a class="dropdown-item" href="#">MEDICAL DOMESTIC HELPER</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            CORPORATE PRODUCTS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">MEDICAL</a></li>
+                            <li><a class="dropdown-item" href="#">MOTOR</a></li>
+                            <li><a class="dropdown-item" href="#">MARINE</a></li>
+                            <li><a class="dropdown-item" href="#">ACCIDENT & LIABILITY</a></li>
+                            <li><a class="dropdown-item" href="#">PROPERTY</a></li>
+                            <li><a class="dropdown-item" href="#">ENGINEERING</a></li>
+                            <li><a class="dropdown-item" href="#">AVIATION</a></li>
+                            <li><a class="dropdown-item" href="#">PROTECTION & SAVINGS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">E-SERVICES</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            CUSTOMER CARE
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">INQUIRY & COMPLAINT</a></li>
+                            <li><a class="dropdown-item" href="#">FRAUD</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                            <li><a class="dropdown-item" href="#">DOWNLOAD CENTER</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CUSTOMER RIGHTS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            ABOUT
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ABOUT ALJAZIRA TAKAFUL</a></li>
+                            <li><a class="dropdown-item" href="#">CORPORATE GOVERNANCE</a></li>
+                            <li><a class="dropdown-item" href="#">SHARIA COMMITTEE</a></li>
+                            <li><a class="dropdown-item" href="#">SHAREHOLDER RELATION</a></li>
+                            <li><a class="dropdown-item" href="#">SHAREHOLDERS INQUIRY AND COMPLAINT</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CAREER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quick Insurance Bar -->
+    <div class="quick-insurance-bar">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-12">
+                    <div class="insurance-tabs d-flex align-items-center justify-content-center">
+                        <a href="#" class="insure-now-btn">Insure now</a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/maid-svgrepo-com.svg" alt="Medical Domestic Helper" class="tab-icon">
+                            <span>Medical<br>Domestic<br>Helper</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/labor-man-labor-svgrepo-com.svg" alt="Craftsmen" class="tab-icon">
+                            <span>Craftsmen</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/motor-icon.svg" alt="Motor" class="tab-icon">
+                            <span>Motor</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/visitvisa-icon.svg" alt="Visit Visa Extension" class="tab-icon">
+                            <span>Visit Visa<br>Extension</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/medicalmalpractice-icon.svg" alt="Medical Malpractice" class="tab-icon">
+                            <span>Medical<br>Malpractice</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/travel-icon.svg" alt="Travel" class="tab-icon">
+                            <span>Travel</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/marine-icon.svg" alt="Marine" class="tab-icon">
+                            <span>Marine</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/medical-icon.svg" alt="Medical" class="tab-icon">
+                            <span>Medical</span>
+                        </a>
+                        <a href="#" class="insurance-tab">
+                            <img src="assets/icons/protection-icon.svg" alt="Protection & Savings" class="tab-icon">
+                            <span>Protection &<br>Savings</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-item">
+                <img src="assets/icons/renew-icon.svg" alt="Card Subscription" class="sidebar-icon">
+                <span>Card Subscription Service</span>
+            </div>
+            <div class="sidebar-item">
+                <img src="assets/icons/print-icon.svg" alt="Print Policy" class="sidebar-icon">
+                <span>Print Policy</span>
+            </div>
+            <div class="sidebar-item">
+                <img src="assets/icons/motor-icon_black.svg" alt="Motor Claim Status" class="sidebar-icon">
+                <span>Motor Claim Status</span>
+            </div>
+            <div class="sidebar-item">
+                <img src="assets/icons/visitvisa-icon-black.svg" alt="Visit Visa Extension" class="sidebar-icon">
+                <span>Visit Visa Extension</span>
+            </div>
+            <div class="sidebar-item">
+                <img src="assets/icons/e-services-icon_black.svg" alt="E-services" class="sidebar-icon">
+                <span>E-services</span>
+            </div>
+        </div>
+
+        <!-- Hero Slider -->
+        <div class="hero-slider-wrapper">
+            <div class="hero-slider" id="heroSlider">
+                <!-- Slide 1 - Pay Online (Image LEFT, Text RIGHT) -->
+                <div class="slide active" data-slide="0">
+                    <div class="slide-inner">
+                        <div class="slide-image">
+                            <img src="assets/images/ecollectionbanner_N.jpg" alt="Pay Online">
+                        </div>
+                        <!-- <div class="slide-text rtl-text">
+                            <h2 class="arabic-title">إدخارك أمانك!</h2>
+                            <p class="arabic-subtitle">خدمة <span class="highlight-text">"السداد الإلكتروني"</span> بكل يسر وسهولة</p>
+                            <a href="#" class="btn-slide">إبدأ الخدمة</a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- Slide 2 - Motor Insurance (Text LEFT, Image RIGHT) -->
+                <div class="slide" data-slide="1">
+                    <div class="slide-inner">
+                        <!-- <div class="slide-text ltr-text">
+                            <h3 class="slide-subtitle">Motor Insurance</h3>
+                            <h2 class="slide-title">You Drive & We Insure</h2>
+                        </div> -->
+                        <div class="slide-image">
+                            <img src="assets/images/MotorHome-EN-normalsize.jpg" alt="Motor Insurance">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 - Medical Insurance (Text LEFT, Image RIGHT) -->
+                <div class="slide" data-slide="2">
+                    <div class="slide-inner">
+                        <!-- <div class="slide-text ltr-text">
+                            <h3 class="slide-subtitle">Medical Insurance</h3>
+                            <h2 class="slide-title">Health Insurance<br>You Can Afford</h2>
+                        </div> -->
+                        <div class="slide-image">
+                            <img src="assets/images/MedicalHome-EN-normalsize.jpg" alt="Medical Insurance">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h2 class="section-title">More than 10 years of insurance services</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-description">
+                        We aim to be the leading company in the field of Islamic Sharia-compliant insurance in the Kingdom of Saudi Arabia and the Middle East region by providing innovative, high-quality insurance solutions in a way that achieves the maximum benefit for our customers, shareholders and employees.
+                    </p>
+                </div>
+                <div class="col-lg-2">
+                    <a href="#" class="btn btn-dark about-btn">About Aljazira Takaful</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="products-bg-shape"></div>
+        
+        <div class="container">
+            <!-- Individual Insurance -->
+            <div class="products-category">
+                <h2 class="category-title">Individual Insurance</h2>
+                <p class="category-subtitle">Live a life full of care</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="#" class="product-card">Motor</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="#" class="product-card">Medical Malpractice</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="#" class="product-card">Visit Visa Extension</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="#" class="product-card">Travel</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="#" class="product-card">Householder</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <a href="#" class="product-card">Protection & Savings</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corporate Insurance -->
+            <div class="products-category">
+                <h2 class="category-title">Corporate Insurance</h2>
+                <p class="category-subtitle">Grow an insured business</p>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Medical</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Motor</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Marine</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Accident & Liability</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Property</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Engineering</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Aviation</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <a href="#" class="product-card">Protection & Savings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="enquiry-section" style="background-image: url('assets/images/enquiry.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Send an Enquiry</h2>
+                    <p>You can send your complaint or inquiry by <a href="#">clicking here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Address -->
+                <div class="col-lg-4">
+                    <div class="footer-logo">
+                        <img src="assets/icons/logo.svg" alt="Al Jazira Takaful">
+                    </div>
+                    <div class="footer-address">
+                        <p>Hira Street, Al Salamah, Jeddah, U-Zone Building</p>
+                        <p>Al Salama, 4516-23324, Kingdom of Saudi Arabia</p>
+                        <p>P.O. Box: 5215 Jeddah 21422</p>
+                        <p>8003040400 | +966 12 6688877</p>
+                        <p><a href="mailto:info@ajt.com.sa">info@ajt.com.sa</a></p>
+                        <p>Sunday- Thursday : 09:00 AM to 5:00 PM</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>ABOUT</h4>
+                        <h4>E-SERVICES</h4>
+                        <h4>FAQS</h4>
+                        <h4>DOWNLOAD CENTER</h4>
+                        <h4>CAREER</h4>
+                    </div>
+                </div>
+                
+                <!-- Social & App -->
+                <div class="col-lg-4">
+                    <h4 class="follow-title">FOLLOW US ON</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="app-text">Download Medical Insurance<br>NextCare Application</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <img src="assets/icons/apple-store.svg" alt="App Store">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="assets/icons/google-store.svg" alt="Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="supervision-text">Subject to the control and supervision of Insurance Authority (IA).</p>
+                    <p class="copyright">Copyright © Al Jazira Takaful 2025. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <a href="#" class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

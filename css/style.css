@@ -1,0 +1,1030 @@
+/* ================================================
+   Al Jazira Takaful Website - Main Styles
+   ================================================ */
+
+/* CSS Variables */
+:root {
+    --primary-color: #00A5DF;
+    --secondary-color: #10426C;
+    --dark-blue: #0B3D5D;
+    --light-blue: #E8F7FC;
+    --white: #FFFFFF;
+    --gray: #F5F5F5;
+    --gray-light: #E8E8E8;
+    --dark-gray: #666666;
+    --text-color: #333333;
+    --border-color: #E0E0E0;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================================================
+   Preloader
+   ================================================ */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    text-align: center;
+}
+
+.preloader-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.preloader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--light-blue);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+/* ================================================
+   Top Bar
+   ================================================ */
+.top-bar {
+    background-color: var(--white);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.top-bar-content {
+    gap: 15px;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-toggle i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.theme-toggle .fa-moon {
+    color: var(--secondary-color);
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: var(--transition);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: var(--transition);
+}
+
+input:checked + .slider {
+    background-color: var(--secondary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.contact-item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 16px;
+}
+
+.lang-toggle a {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.login-btn a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* ================================================
+   Main Navigation
+   ================================================ */
+.main-nav {
+    background-color: var(--white);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 10px 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 250px;
+}
+
+.navbar-nav .dropdown-item {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: var(--light-blue);
+    color: var(--primary-color);
+}
+
+/* ================================================
+   Quick Insurance Bar
+   ================================================ */
+.quick-insurance-bar {
+    background-color: var(--primary-color);
+    padding: 0;
+}
+
+.insurance-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.insure-now-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 20px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    white-space: nowrap;
+    min-height: 100px;
+}
+
+.insure-now-btn:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.insurance-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    color: var(--white);
+    text-align: center;
+    min-width: 100px;
+    transition: var(--transition);
+    min-height: 100px;
+}
+
+.insurance-tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+/* SVG Tab Icons */
+.tab-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.insurance-tab:hover .tab-icon {
+    transform: scale(1.1);
+}
+
+.insurance-tab span {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* ================================================
+   Main Content Area
+   ================================================ */
+.main-content {
+    display: flex;
+    position: relative;
+    min-height: 500px;
+    background-color: var(--white);
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 100;
+    width: 280px;
+}
+
+.sidebar-item {
+    background-color: #E8E8E8;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-item:hover {
+    background-color: #d9d9d9;
+}
+
+/* Sidebar SVG Icons */
+.sidebar-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.sidebar-item span {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ================================================
+   Hero Slider - Custom (No Carousel Arrows)
+   THIS IS THE CRITICAL SECTION FOR SLIDER
+   ================================================ */
+.hero-slider-wrapper {
+    flex: 1;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+/* CRITICAL: Hide all slides by default - Stack them on top of each other */
+.slide {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    background-color: #FFFFFF;
+}
+
+/* CRITICAL: Only show the active slide */
+.slide.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.slide-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 40px 80px;
+    gap: 40px;
+}
+
+/* Slide Text Styles */
+.slide-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.slide-text.rtl-text {
+    text-align: right;
+    direction: rtl;
+}
+
+.slide-text.ltr-text {
+    text-align: left;
+    direction: ltr;
+}
+
+/* Arabic Slide (Slide 1) */
+.arabic-title {
+    font-size: 52px;
+    color: #10426C;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.arabic-subtitle {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.arabic-subtitle .highlight-text {
+    color: #00A5DF;
+}
+
+.btn-slide {
+    display: inline-block;
+    background-color: #00A5DF;
+    color: #FFFFFF;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-slide:hover {
+    background-color: #10426C;
+    color: #FFFFFF;
+}
+
+/* English Slides (Slide 2 & 3) */
+.slide-subtitle {
+    font-size: 24px;
+    color: #10426C;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.slide-title {
+    font-size: 42px;
+    color: #00A5DF;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Slide Image */
+.slide-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-image img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* ================================================
+   About Section
+   ================================================ */
+.about-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1.3;
+}
+
+.section-description {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.8;
+}
+
+.about-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.about-btn:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+/* ================================================
+   Products Section
+   ================================================ */
+.products-section {
+    padding: 80px 0;
+    background-color: var(--gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.products-bg-shape {
+    position: absolute;
+    left: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(135deg, rgba(224, 224, 224, 0.5) 0%, rgba(245, 245, 245, 0.3) 100%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.products-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.products-category {
+    margin-bottom: 60px;
+}
+
+.products-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.category-subtitle {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    display: block;
+    background-color: var(--white);
+    padding: 25px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* ================================================
+   Enquiry Section
+   ================================================ */
+.enquiry-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 150px 0;
+    position: relative;
+}
+
+.enquiry-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+}
+
+.enquiry-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.enquiry-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.enquiry-section p {
+    font-size: 16px;
+    color: var(--dark-gray);
+}
+
+.enquiry-section a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* ================================================
+   Footer
+   ================================================ */
+.main-footer {
+    background-color: var(--light-blue);
+    padding: 60px 0 40px;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-address {
+    color: var(--secondary-color);
+}
+
+.footer-address p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-address a {
+    color: var(--primary-color);
+}
+
+.footer-links h4 {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.footer-links h4:hover {
+    color: var(--primary-color);
+}
+
+.follow-title {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.app-text {
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.app-btn img {
+    height: 40px;
+    width: auto;
+}
+
+/* ================================================
+   Footer Bottom
+   ================================================ */
+.footer-bottom {
+    background-color: var(--secondary-color);
+    padding: 30px 0;
+}
+
+.supervision-text {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* ================================================
+   Scroll to Top Button
+   ================================================ */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+/* ================================================
+   Dark Theme
+   ================================================ */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
+
+body.dark-theme .top-bar,
+body.dark-theme .main-nav,
+body.dark-theme .hero-slider-wrapper,
+body.dark-theme .about-section,
+body.dark-theme .product-card {
+    background-color: #16213e;
+}
+
+body.dark-theme .slide {
+    background-color: #16213e;
+}
+
+body.dark-theme .products-section {
+    background-color: #0f0f23;
+}
+
+body.dark-theme .navbar-nav .nav-link,
+body.dark-theme .section-title,
+body.dark-theme .category-title,
+body.dark-theme .product-card {
+    color: #eaeaea !important;
+}
+
+body.dark-theme .sidebar-item {
+    background-color: #16213e;
+}
+
+body.dark-theme .sidebar-item span {
+    color: var(--primary-color);
+}
+
+body.dark-theme .sidebar-icon {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-theme .main-footer {
+    background-color: #16213e;
+}
+
+body.dark-theme .footer-address,
+body.dark-theme .footer-links h4,
+body.dark-theme .follow-title,
+body.dark-theme .app-text {
+    color: #eaeaea;
+}
+
+body.dark-theme .preloader {
+    background-color: #1a1a2e;
+}
+
+body.dark-theme .products-bg-shape {
+    background: linear-gradient(135deg, rgba(30, 30, 60, 0.5) 0%, rgba(15, 15, 35, 0.3) 100%);
+}
+
+body.dark-theme .arabic-title,
+body.dark-theme .slide-subtitle {
+    color: #eaeaea;
+}
+
+/* ================================================
+   Responsive Styles
+   ================================================ */
+@media (max-width: 1200px) {
+    .left-sidebar {
+        display: none;
+    }
+    
+    .insurance-tab {
+        padding: 10px 15px;
+        min-width: 80px;
+    }
+    
+    .tab-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .insurance-tab span {
+        font-size: 10px;
+    }
+    
+    .slide-inner {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .top-bar-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .quick-insurance-bar {
+        display: none;
+    }
+    
+    .slide-inner {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .slide-text.rtl-text,
+    .slide-text.ltr-text {
+        text-align: center;
+    }
+    
+    .arabic-title {
+        font-size: 36px;
+    }
+    
+    .slide-title {
+        font-size: 28px;
+    }
+    
+    .slide-image img {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title,
+    .category-title {
+        font-size: 24px;
+    }
+    
+    .enquiry-section h2 {
+        font-size: 28px;
+    }
+    
+    .footer-logo img {
+        height: 50px;
+    }
+    
+    .app-buttons {
+        flex-direction: column;
+    }
+    
+    .app-btn img {
+        height: 35px;
+    }
+    
+    .hero-slider {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-bar-content {
+        gap: 10px;
+    }
+    
+    .contact-item a span,
+    .lang-toggle a,
+    .login-btn a span {
+        font-size: 14px;
+    }
+    
+    .hero-slider {
+        height: 350px;
+    }
+    
+    .arabic-title {
+        font-size: 28px;
+    }
+    
+    .slide-title {
+        font-size: 24px;
+    }
+    
+    .preloader-logo {
+        width: 120px;
+    }
+}
+
+/* ================================================
+   Animations
+   ================================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection style */
+::selection {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
