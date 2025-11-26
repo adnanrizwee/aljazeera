@@ -520,6 +520,8 @@ input:checked + .slider:before {
     font-size: 15px;
     color: var(--dark-gray);
     line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 25px;
 }
 
 .about-btn {
@@ -530,13 +532,13 @@ input:checked + .slider:before {
     font-weight: 600;
     font-size: 14px;
     white-space: nowrap;
+    display: inline-block;
 }
 
 .about-btn:hover {
     background-color: var(--dark-blue);
     color: var(--white);
 }
-
 /* ================================================
    Products Section
    ================================================ */
