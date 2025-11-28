@@ -272,19 +272,23 @@ input:checked + .slider:before {
 .insurance-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
+    justify-content: flex-start;
 }
 
 .insure-now-btn {
     background-color: var(--secondary-color);
     color: var(--white);
-    padding: 20px 30px;
+    padding: 15px 35px;
     font-weight: 600;
     font-size: 16px;
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: var(--transition);
     white-space: nowrap;
-    min-height: 100px;
+    min-height: 85px;
+    flex: 0 0 auto;
+    min-width: 160px;
 }
 
 .insure-now-btn:hover {
@@ -297,17 +301,56 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15px 20px;
+    padding: 12px 18px;
     color: var(--white);
     text-align: center;
     min-width: 100px;
     transition: var(--transition);
-    min-height: 100px;
+    min-height: 85px;
+    flex: 1 1 0;
 }
 
 .insurance-tab:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--white);
+}
+
+/* SVG Tab Icons */
+.tab-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.insurance-tab:hover .tab-icon {
+    transform: scale(1.1);
+}
+
+.insurance-tab span {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* SVG Tab Icons */
+.tab-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 8px;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+}
+
+.insurance-tab:hover .tab-icon {
+    transform: scale(1.1);
+}
+
+.insurance-tab span {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 /* SVG Tab Icons */
@@ -802,14 +845,13 @@ body.dark-theme {
 
 body.dark-theme .top-bar,
 body.dark-theme .main-nav,
-body.dark-theme .hero-slider-wrapper,
 body.dark-theme .about-section,
 body.dark-theme .product-card {
     background-color: #16213e;
 }
 
-body.dark-theme .slide {
-    background-color: #16213e;
+body.dark-theme .main-content {
+    background-color: #FFFFFF;
 }
 
 body.dark-theme .products-section {
